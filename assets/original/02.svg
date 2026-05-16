@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1311.62 890.35">
+  <rect width="1311.62" height="890.35" fill="#fff"/>
+  <g fill="#000" font-family="Arial, 'Microsoft YaHei', 'PingFang SC', sans-serif">
+    <text x="75.92" y="74.5" font-size="16">使用方法</text>
+    <text x="157.5" y="74.5" font-size="16">How to use</text>
+    <text x="75.92" y="89.15" font-size="11" font-weight="700">规则：点击图片库图片，会转跳出图片所对应的名称和图形</text>
+  </g>
+  <g fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.15">
+    <line x1="885.96" y1="642.82" x2="1284.05" y2="875.09"/>
+    <line x1="1017.44" y1="423.47" x2="1022.43" y2="832.15"/>
+    <line x1="0.04" y1="346.33" x2="469.92" y2="616.9"/>
+  </g>
+</svg>

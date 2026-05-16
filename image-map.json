@@ -1,0 +1,93 @@
+[
+  {
+    "id": "city",
+    "name": "城市",
+    "eng_name": "City",
+    "concretePic": "./assets/concrete/城市.svg",
+    "abstractPic": "./assets/abstract/城市.svg"
+  },
+  {
+    "id": "house",
+    "name": "房屋",
+    "eng_name": "House",
+    "concretePic": "./assets/concrete/房屋.svg",
+    "abstractPic": "./assets/abstract/房屋.svg"
+  },
+  {
+    "id": "corridor",
+    "name": "走廊",
+    "eng_name": "Corridor",
+    "concretePic": "./assets/concrete/走廊.svg",
+    "abstractPic": "./assets/abstract/走廊.svg"
+  },
+  {
+    "id": "night",
+    "name": "夜晚",
+    "eng_name": "Night",
+    "concretePic": "./assets/concrete/夜晚.svg",
+    "abstractPic": "./assets/abstract/夜晚.svg"
+  },
+  {
+    "id": "tunnel",
+    "name": "隧道",
+    "eng_name": "Tunnel",
+    "concretePic": "./assets/concrete/隧道.svg",
+    "abstractPic": "./assets/abstract/隧道.svg"
+  },
+  {
+    "id": "borderless",
+    "name": "无边空间",
+    "eng_name": "Borderless Space",
+    "concretePic": "./assets/concrete/无边空间.svg",
+    "abstractPic": "./assets/abstract/无边空间.svg"
+  },
+  {
+    "id": "sky",
+    "name": "天空",
+    "eng_name": "Sky",
+    "concretePic": "./assets/concrete/天空.svg",
+    "abstractPic": "./assets/abstract/天空.svg"
+  },
+  {
+    "id": "hover",
+    "name": "飞翔",
+    "eng_name": "Hover",
+    "concretePic": "./assets/concrete/飞翔.svg",
+    "abstractPic": "./assets/abstract/飞翔.svg"
+  },
+  {
+    "id": "beach",
+    "name": "沙滩",
+    "eng_name": "Beach",
+    "concretePic": "./assets/concrete/沙滩.svg",
+    "abstractPic": "./assets/abstract/沙漠.svg"
+  },
+  {
+    "id": "water",
+    "name": "水",
+    "eng_name": "Water",
+    "concretePic": "./assets/concrete/水.svg",
+    "abstractPic": "./assets/abstract/水.svg"
+  },
+  {
+    "id": "wind",
+    "name": "风",
+    "eng_name": "Wind",
+    "concretePic": "./assets/concrete/风.svg",
+    "abstractPic": "./assets/abstract/风.svg"
+  },
+  {
+    "id": "sea",
+    "name": "海",
+    "eng_name": "Sea",
+    "concretePic": "./assets/concrete/海.svg",
+    "abstractPic": "./assets/abstract/海.svg"
+  },
+  {
+    "id": "cloud",
+    "name": "云",
+    "eng_name": "Cloud",
+    "concretePic": "./assets/concrete/云.svg",
+    "abstractPic": "./assets/abstract/云.svg"
+  }
+]

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>梦境情绪动态交互</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="dream-scroll">
+      <section class="screen screen-home svg-art-screen" id="screen-1" style="--svg-aspect: 1366.07 / 812.66" aria-label="首页">
+        <img class="original-svg" src="./assets/original/01.svg" alt="梦境首页原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <div class="line l-home-1"></div>
+        <div class="line l-home-2"></div>
+        <div class="line l-home-3"></div>
+        <div class="line l-home-4"></div>
+        <div class="line l-home-5"></div>
+        <div class="line l-home-6"></div>
+        <div class="home-label title-main"><strong>梦境</strong></div>
+        <div class="home-label label-a"><span>用户梦境测试</span><small>User Dream Test</small></div>
+        <div class="home-label label-b"><span>图形使用说明</span><small>Instructions for the use of graphics</small></div>
+        <div class="home-label label-c"><span>色彩使用说明</span><small>Instructions for the use of colour</small></div>
+        <div class="home-label label-d"><span>TD情绪动态交互</span><small>TD emotional dynamic interaction</small></div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-2" id="screen-2" style="--svg-aspect: 1311.62 / 890.35" aria-label="使用方法：地点图形">
+        <img class="original-svg" src="./assets/original/02.svg" alt="地点图形使用说明原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <div class="line s2-line-a"></div>
+        <div class="line s2-line-b"></div>
+        <div class="line s2-line-c"></div>
+        <header class="section-title">
+          <h1>使用方法 <span>How to use</span></h1>
+          <p>点击图片库图片，会显示图片对应的名称和图形。</p>
+        </header>
+        <div class="photo-row" id="introPhotoChoices"></div>
+        <div class="concentric-preview large-preview" id="introPhotoPreview"></div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-3" id="screen-3" style="--svg-aspect: 1235.7 / 789.62" aria-label="使用方法：基础色彩">
+        <img class="original-svg" src="./assets/original/03.svg" alt="基础色彩使用说明原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <div class="line s3-line-a"></div>
+        <div class="line s3-line-b"></div>
+        <header class="section-title">
+          <h1>使用方法 <span>How to use</span></h1>
+          <p>点击颜色罗盘，查看颜色、强度、记忆清晰度与情绪状态。</p>
+        </header>
+        <div class="split split-color">
+          <div class="fan-wrap">
+            <svg class="color-fan" id="basicColorFan" viewBox="0 0 520 520" role="img"></svg>
+          </div>
+          <div class="radial-info" id="basicColorInfo"></div>
+        </div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-4" id="screen-4" style="--svg-aspect: 1305.56 / 667.6" aria-label="图形使用说明">
+        <img class="original-svg" src="./assets/original/4.svg" alt="图形使用说明原稿" />
+        <div class="frame-line bottom"></div>
+        <div class="line s4-line-a"></div>
+        <div class="line s4-line-b"></div>
+        <header class="section-title wide">
+          <h1>图形使用说明 <span>Instructions for the use of graphics</span></h1>
+          <div class="inline-legend" id="locationInlineLegend"></div>
+        </header>
+        <div class="graphics-stage">
+          <div class="location-orbit" id="locationOrbit"></div>
+          <div class="concentric-preview small-preview" id="locationPreview"></div>
+        </div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-5" id="screen-5" style="--svg-aspect: 1217.54 / 681.41" aria-label="色彩使用说明">
+        <img class="original-svg" src="./assets/original/5.svg" alt="色彩使用说明原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <div class="line s5-line-a"></div>
+        <div class="line s5-line-b"></div>
+        <div class="line s5-line-c"></div>
+        <header class="section-title">
+          <h1>色彩使用说明 <span>Instructions for the use of colour</span></h1>
+          <p>情绪强度、情绪倾向和梦境清晰度共同决定颜色变化。</p>
+        </header>
+        <div class="split split-color full">
+          <div class="fan-wrap fan-wide">
+            <svg class="color-fan" id="fullColorFan" viewBox="0 0 680 600" role="img"></svg>
+          </div>
+          <div class="radial-info" id="fullColorInfo"></div>
+        </div>
+      </section>
+
+      <section class="screen compact-screen svg-art-screen" id="screen-6" style="--svg-aspect: 1235.7 / 698.9" aria-label="使用方法：情绪选择介绍">
+        <img class="original-svg" src="./assets/original/6.svg" alt="情绪选择介绍原稿" />
+        <header class="section-title">
+          <h1>使用方法 <span>How to use</span></h1>
+          <p>点击带有颜色与文字标注的图形，表达梦中感受到的情绪。</p>
+        </header>
+        <div class="emotion-intro">
+          <div class="emotion-arc-cloud static-cloud" id="emotionIntroCloud"></div>
+          <div class="choose-label">选择 <span>Choose</span></div>
+          <div class="mini-selected-orbit" id="emotionIntroOrbit"></div>
+        </div>
+        <div class="line s6-line-a"></div>
+        <div class="line s6-line-b"></div>
+        <div class="line s6-line-c"></div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-7" id="screen-7" style="--svg-aspect: 1338.78 / 875.83" aria-label="用户梦境测试：选择情绪">
+        <img class="original-svg" src="./assets/original/7.svg" alt="用户梦境测试选择情绪原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <header class="section-title">
+          <h1>用户梦境测试 <span>User Dream Test</span></h1>
+          <p>选择梦境情绪，支持多选。</p>
+        </header>
+        <div class="test-emotion-stage">
+          <div class="emotion-arc-cloud selectable-cloud" id="emotionSelectCloud"></div>
+          <div class="selection-side">
+            <div class="mini-selected-orbit test-orbit" id="emotionSelectionOrbit"></div>
+          </div>
+        </div>
+        <div class="emotion-legend" id="emotionLegend"></div>
+        <div class="line s7-line-a"></div>
+        <div class="line s7-line-b"></div>
+        <div class="line s7-line-c"></div>
+      </section>
+
+      <section class="screen svg-art-screen" id="screen-8" style="--svg-aspect: 1306.36 / 733.89" aria-label="使用方法：测试步骤">
+        <img class="original-svg" src="./assets/original/8.svg" alt="梦境测试步骤说明原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <header class="section-title">
+          <h1>使用方法 <span>How to use</span></h1>
+          <p>先选择情绪，再选择情绪强度、情绪倾向、记忆清晰度和发生地点。</p>
+        </header>
+        <div class="method-strip" id="methodStrip"></div>
+        <div class="method-actions">
+          <button type="button" class="text-action">下个情绪 <span>The next emotion</span></button>
+          <button type="button" class="text-action">完成 <span>Over</span></button>
+        </div>
+        <div class="line s8-line-a"></div>
+        <div class="line s8-line-b"></div>
+      </section>
+
+      <section class="screen svg-art-screen svg-interactive-screen svg-screen-9" id="screen-9" style="--svg-aspect: 1234.92 / 802.97" aria-label="用户梦境测试：情绪细化">
+        <img class="original-svg" src="./assets/original/9.svg" alt="用户梦境测试情绪细化原稿" />
+        <div class="frame-line top"></div>
+        <div class="frame-line bottom"></div>
+        <header class="section-title refine-title">
+          <h1>用户梦境测试 <span>User Dream Test</span></h1>
+          <div class="rule-row">
+            <span>描述当前情绪：<b id="currentEmotionName">冒险冲动</b></span>
+            <span>运用规则</span>
+            <span>规则1：选择情绪强烈程度</span>
+            <span>规则2：选择情感倾向</span>
+            <span>规则3：选择梦中记忆清晰度</span>
+            <span>规则4：选择梦中场景地点</span>
+          </div>
+        </header>
+        <div class="refine-guide" id="refineGuide"></div>
+        <div class="refine-layout">
+          <div class="control-ring" id="controlRing"></div>
+          <div class="result-panel">
+            <div class="mini-selected-orbit result-orbit" id="refineResultOrbit"></div>
+            <div class="refine-actions">
+              <button type="button" id="nextEmotionBtn">下个情绪 <span>The next emotion</span></button>
+              <button type="button" id="finishBtn">完成 <span>Over</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="line s9-line-a"></div>
+        <div class="line s9-line-b"></div>
+        <div class="dream-ai-panel" id="dreamAiPanel" aria-live="polite">
+          <div class="dream-ai-panel__header">
+            <span>梦境解读</span>
+            <small>DeepSeek Interpretation</small>
+          </div>
+          <div class="dream-ai-summary" id="dreamAiSummary"></div>
+          <div class="dream-ai-thinking" id="dreamAiThinking"></div>
+          <div class="dream-ai-output is-idle" id="dreamAiOutput">完成情绪与地点选择后，这里会生成一段梦境解读。</div>
+        </div>
+      </section>
+
+      <section class="screen svg-art-screen svg-screen-10" id="screen-10" style="--svg-aspect: 1303.29 / 727.85" aria-label="情绪动态交互">
+        <img class="original-svg" src="./assets/original/10.svg" alt="情绪动态交互原稿" />
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

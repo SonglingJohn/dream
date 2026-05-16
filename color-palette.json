@@ -1,0 +1,66 @@
+{
+  "accents": {
+    "red": "#e70033",
+    "yellow": "#ffcb00",
+    "blue": "#404898",
+    "green": "#00a759"
+  },
+  "palette": {
+    "red": {
+      "slight": {
+        "positive": { "blur": "#f8a4bb", "clear": "#f8799b" },
+        "negative": { "blur": "#fbbcc8", "clear": "#fe94ab" }
+      },
+      "medium": {
+        "positive": { "blur": "#f1446f", "clear": "#e70f47" },
+        "negative": { "blur": "#f85a7a", "clear": "#e70033" }
+      },
+      "strong": {
+        "positive": { "blur": "#c0143c", "clear": "#9b243e" },
+        "negative": { "blur": "#cc092f", "clear": "#ac1a2f" }
+      }
+    },
+    "yellow": {
+      "slight": {
+        "positive": { "blur": "#fae04e", "clear": "#fbde42" },
+        "negative": { "blur": "#f9e655", "clear": "#fce122" }
+      },
+      "medium": {
+        "positive": { "blur": "#fcdc41", "clear": "#ffcb00" },
+        "negative": { "blur": "#fed900", "clear": "#ffd200" }
+      },
+      "strong": {
+        "positive": { "blur": "#c99900", "clear": "#af8900" },
+        "negative": { "blur": "#d8aa00", "clear": "#ab8d00" }
+      }
+    },
+    "blue": {
+      "slight": {
+        "positive": { "blur": "#aac2e8", "clear": "#6784d2" },
+        "negative": { "blur": "#bfd4ef", "clear": "#a6c6ee" }
+      },
+      "medium": {
+        "positive": { "blur": "#4c64b7", "clear": "#404898" },
+        "negative": { "blur": "#5a87dc", "clear": "#3546a6" }
+      },
+      "strong": {
+        "positive": { "blur": "#434b83", "clear": "#444c77" },
+        "negative": { "blur": "#3c4a84", "clear": "#3e4975" }
+      }
+    },
+    "green": {
+      "slight": {
+        "positive": { "blur": "#83e3a9", "clear": "#67dd9b" },
+        "negative": { "blur": "#8fdab0", "clear": "#74d0a0" }
+      },
+      "medium": {
+        "positive": { "blur": "#46d58d", "clear": "#00a759" },
+        "negative": { "blur": "#49be88", "clear": "#009e68" }
+      },
+      "strong": {
+        "positive": { "blur": "#009355", "clear": "#327a52" },
+        "negative": { "blur": "#238459", "clear": "#407056" }
+      }
+    }
+  }
+}
