@@ -1397,16 +1397,16 @@ function renderRefineSelector() {
   const emotionBubble = svgEl('g', { class: 'svg-current-emotion' })
   emotionBubble.append(
     svgEl('circle', {
-      cx: 215.56,
-      cy: 89.24,
+      cx: 150.56,
+      cy: 123.24,
       r: 19.7,
       fill: currentEmotion.color,
       stroke: 'none',
     })
   )
   const emotionText = svgEl('text', {
-    x: 215.56,
-    y: 92.8,
+    x: 150.56,
+    y: 126.8,
     'text-anchor': 'middle',
     class: 'svg-current-emotion-text',
     'font-size': currentEmotion.zh.length > 4 ? 5.4 : 7,
@@ -1992,46 +1992,6 @@ function bindRefineActions() {
   qs('#finishBtn').addEventListener('click', finishRefine)
 }
 
-function initPageMotion() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-  const screens = qsa('.screen')
-  if (!screens.length) return
-
-  document.body.classList.add('motion-ready')
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle('is-in-view', entry.isIntersecting)
-      })
-    },
-    { rootMargin: '-18% 0px -18% 0px', threshold: 0.12 }
-  )
-  screens.forEach(screen => observer.observe(screen))
-
-  let ticking = false
-  const update = () => {
-    ticking = false
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight
-    const center = viewportHeight / 2
-    screens.forEach(screen => {
-      const rect = screen.getBoundingClientRect()
-      const screenCenter = rect.top + rect.height / 2
-      const distance = (screenCenter - center) / Math.max(viewportHeight, 1)
-      const progress = Math.max(0, Math.min(1, 0.5 + distance))
-      screen.style.setProperty('--screen-progress', progress.toFixed(4))
-      screen.classList.toggle('is-past', rect.bottom < center && !screen.classList.contains('is-in-view'))
-    })
-  }
-  const requestUpdate = () => {
-    if (ticking) return
-    ticking = true
-    window.requestAnimationFrame(update)
-  }
-  window.addEventListener('scroll', requestUpdate, { passive: true })
-  window.addEventListener('resize', requestUpdate)
-  update()
-}
-
 async function init() {
   await mergeImageMap()
   normalizeAbstractAssets()
@@ -2047,7 +2007,6 @@ async function init() {
   renderRefine()
   renderExpressions()
   bindRefineActions()
-  initPageMotion()
 }
 
 init()
